@@ -426,10 +426,25 @@ Config.Products = {
 }
 
 Config.Locations = {
+    -- Don's
+    ["donscountrystore"] = {
+        ["label"] = "Joker's Country Store",
+        ["coords"] = vector4(161.01, 6641.51, 31.7, 225.51),
+        ["ped"] = 'joker',
+        ["scenario"] = "WORLD_HUMAN_STAND_MOBILE",
+        ["radius"] = 1.5,
+        ["targetIcon"] = "fas fa-shopping-basket",
+        ["targetLabel"] = "Open Shop",
+        ["products"] = Config.Products["normal"],
+        ["showblip"] = true,
+        ["blipsprite"] = 52,
+        ["blipcolor"] = 0
+    },
+
     -- 24/7 Locations
     ["247supermarket"] = {
         ["label"] = "24/7 Supermarket",
-        ["coords"] = vector4(24.47, -1346.62, 29.5, 271.66),
+        ["coords"] = vector4(24.47, -1346.62, 29.5, 271.66), -- 9046
         ["ped"] = 'mp_m_shopkeep_01',
         ["scenario"] = "WORLD_HUMAN_STAND_MOBILE",
         ["radius"] = 1.5,
@@ -443,7 +458,7 @@ Config.Locations = {
 
     ["247supermarket2"] = {
         ["label"] = "24/7 Supermarket",
-        ["coords"] = vector4(-3039.54, 584.38, 7.91, 17.27),
+        ["coords"] = vector4(-3039.54, 584.38, 7.91, 17.27), -- 5047
         ["ped"] = 'mp_m_shopkeep_01',
         ["scenario"] = "WORLD_HUMAN_STAND_MOBILE",
         ["radius"] = 1.5,
@@ -457,7 +472,7 @@ Config.Locations = {
 
     ["247supermarket3"] = {
         ["label"] = "24/7 Supermarket",
-        ["coords"] = vector4(-3242.97, 1000.01, 12.83, 357.57),
+        ["coords"] = vector4(-3242.97, 1000.01, 12.83, 357.57), -- 5037
         ["ped"] = 'mp_m_shopkeep_01',
         ["scenario"] = "WORLD_HUMAN_STAND_MOBILE",
         ["radius"] = 1.5,
@@ -471,7 +486,7 @@ Config.Locations = {
 
     ["247supermarket4"] = {
         ["label"] = "24/7 Supermarket",
-        ["coords"] = vector4(1728.07, 6415.63, 35.04, 242.95),
+        ["coords"] = vector4(1728.07, 6415.63, 35.04, 242.95), -- 1000
         ["ped"] = 'mp_m_shopkeep_01',
         ["scenario"] = "WORLD_HUMAN_STAND_MOBILE",
         ["radius"] = 1.5,
@@ -485,7 +500,7 @@ Config.Locations = {
 
     ["247supermarket5"] = {
         ["label"] = "24/7 Supermarket",
-        ["coords"] = vector4(1959.82, 3740.48, 32.34, 301.57),
+        ["coords"] = vector4(1959.82, 3740.48, 32.34, 301.57), -- 3008
         ["ped"] = 'mp_m_shopkeep_01',
         ["scenario"] = "WORLD_HUMAN_STAND_MOBILE",
         ["radius"] = 1.5,
@@ -499,7 +514,7 @@ Config.Locations = {
 
     ["247supermarket6"] = {
         ["label"] = "24/7 Supermarket",
-        ["coords"] = vector4(549.13, 2670.85, 42.16, 99.39),
+        ["coords"] = vector4(549.13, 2670.85, 42.16, 99.39), -- 4019
         ["ped"] = 'mp_m_shopkeep_01',
         ["scenario"] = "WORLD_HUMAN_STAND_MOBILE",
         ["radius"] = 1.5,
@@ -513,7 +528,7 @@ Config.Locations = {
 
     ["247supermarket7"] = {
         ["label"] = "24/7 Supermarket",
-        ["coords"] = vector4(2677.47, 3279.76, 55.24, 335.08),
+        ["coords"] = vector4(2677.47, 3279.76, 55.24, 335.08), -- 3051
         ["ped"] = 'mp_m_shopkeep_01',
         ["scenario"] = "WORLD_HUMAN_STAND_MOBILE",
         ["radius"] = 1.5,
@@ -527,7 +542,7 @@ Config.Locations = {
 
     ["247supermarket8"] = {
         ["label"] = "24/7 Supermarket",
-        ["coords"] = vector4(2556.66, 380.84, 108.62, 356.67),
+        ["coords"] = vector4(2556.66, 380.84, 108.62, 356.67), -- 7154
         ["ped"] = 'mp_m_shopkeep_01',
         ["scenario"] = "WORLD_HUMAN_STAND_MOBILE",
         ["radius"] = 1.5,
@@ -541,7 +556,7 @@ Config.Locations = {
 
     ["247supermarket9"] = {
         ["label"] = "24/7 Supermarket",
-        ["coords"] = vector4(372.66, 326.98, 103.57, 253.73),
+        ["coords"] = vector4(372.66, 326.98, 103.57, 253.73), -- 7093
         ["ped"] = 'mp_m_shopkeep_01',
         ["scenario"] = "WORLD_HUMAN_STAND_MOBILE",
         ["radius"] = 1.5,
@@ -556,7 +571,7 @@ Config.Locations = {
     -- LTD Gasoline Locations
     ["ltdgasoline"] = {
         ["label"] = "LTD Gasoline",
-        ["coords"] = vector4(-47.02, -1758.23, 29.42, 45.05),
+        ["coords"] = vector4(-47.02, -1758.23, 29.42, 45.05), -- 9094
         ["ped"] = 'mp_m_shopkeep_01',
         ["scenario"] = "WORLD_HUMAN_STAND_MOBILE",
         ["radius"] = 1.5,
@@ -570,7 +585,7 @@ Config.Locations = {
 
     ["ltdgasoline2"] = {
         ["label"] = "LTD Gasoline",
-        ["coords"] = vector4(-706.06, -913.97, 19.22, 88.04),
+        ["coords"] = vector4(-706.06, -913.97, 19.22, 88.04), -- 8140
         ["ped"] = 'mp_m_shopkeep_01',
         ["scenario"] = "WORLD_HUMAN_STAND_MOBILE",
         ["radius"] = 1.5,
@@ -584,7 +599,7 @@ Config.Locations = {
 
     ["ltdgasoline3"] = {
         ["label"] = "LTD Gasoline",
-        ["coords"] = vector4(-1820.02, 794.03, 138.09, 135.45),
+        ["coords"] = vector4(-1820.02, 794.03, 138.09, 135.45), -- 5016
         ["ped"] = 'mp_m_shopkeep_01',
         ["scenario"] = "WORLD_HUMAN_STAND_MOBILE",
         ["radius"] = 1.5,
@@ -598,7 +613,7 @@ Config.Locations = {
 
     ["ltdgasoline4"] = {
         ["label"] = "LTD Gasoline",
-        ["coords"] = vector4(1164.71, -322.94, 69.21, 101.72),
+        ["coords"] = vector4(1164.71, -322.94, 69.21, 101.72), -- 7302
         ["ped"] = 'mp_m_shopkeep_01',
         ["scenario"] = "WORLD_HUMAN_STAND_MOBILE",
         ["radius"] = 1.5,
@@ -612,7 +627,7 @@ Config.Locations = {
 
     ["ltdgasoline5"] = {
         ["label"] = "LTD Gasoline",
-        ["coords"] = vector4(1697.87, 4922.96, 42.06, 324.71),
+        ["coords"] = vector4(1697.87, 4922.96, 42.06, 324.71), -- 2006
         ["ped"] = 'mp_m_shopkeep_01',
         ["scenario"] = "WORLD_HUMAN_STAND_MOBILE",
         ["radius"] = 1.5,
@@ -624,7 +639,7 @@ Config.Locations = {
         ["blipcolor"] = 0
     },
 
-    -- Rob's Liquor Locations
+    -- Rob's Liquor Locations (tested w/ gabs)
     ["robsliquor"] = {
         ["label"] = "Rob's Liqour",
         ["coords"] = vector4(-1221.58, -908.15, 12.33, 35.49),
@@ -695,7 +710,7 @@ Config.Locations = {
         ["blipcolor"] = 0
     },
 
-    -- Hardware Store Locations
+    -- Hardware Store Locations (Checked w/ Gabz)
     ["hardware"] = {
         ["label"] = "Hardware Store",
         ["coords"] = vector4(45.68, -1749.04, 29.61, 53.13),
@@ -742,7 +757,7 @@ Config.Locations = {
     ["ammunation"] = {
         ["label"] = "Ammunation",
         ["type"] = "weapon",
-        ["coords"] = vector4(-661.96, -933.53, 21.83, 177.05),
+        ["coords"] = vector4(-659.09, -939.0, 21.83, 93.82), -- 8140
         ["ped"] = 's_m_y_ammucity_01',
         ["scenario"] = "WORLD_HUMAN_COP_IDLES",
         ["radius"] = 1.5,
@@ -756,7 +771,7 @@ Config.Locations = {
     ["ammunation2"] = {
         ["label"] = "Ammunation",
         ["type"] = "weapon",
-        ["coords"] = vector4(809.68, -2159.13, 29.62, 1.43),
+        ["coords"] = vector4(814.04, -2155.2, 29.62, 1.28), -- 9275
         ["ped"] = 's_m_y_ammucity_01',
         ["scenario"] = "WORLD_HUMAN_COP_IDLES",
         ["radius"] = 1.5,
@@ -770,7 +785,7 @@ Config.Locations = {
     ["ammunation3"] = {
         ["label"] = "Ammunation",
         ["type"] = "weapon",
-        ["coords"] = vector4(1692.67, 3761.38, 34.71, 227.65),
+        ["coords"] = vector4(1697.32, 3758.09, 34.71, 152.05), -- 3018
         ["ped"] = 's_m_y_ammucity_01',
         ["scenario"] = "WORLD_HUMAN_COP_IDLES",
         ["radius"] = 1.5,
@@ -784,7 +799,7 @@ Config.Locations = {
     ["ammunation4"] = {
         ["label"] = "Ammunation",
         ["type"] = "weapon",
-        ["coords"] = vector4(-331.23, 6085.37, 31.45, 228.02),
+        ["coords"] = vector4(-326.7, 6081.85, 31.45, 137.59), -- 1034
         ["ped"] = 's_m_y_ammucity_01',
         ["scenario"] = "WORLD_HUMAN_COP_IDLES",
         ["radius"] = 1.5,
@@ -798,7 +813,7 @@ Config.Locations = {
     ["ammunation5"] = {
         ["label"] = "Ammunation",
         ["type"] = "weapon",
-        ["coords"] = vector4(253.63, -51.02, 69.94, 72.91),
+        ["coords"] = vector4(247.49, -51.65, 69.94, 330.99), -- 7121
         ["ped"] = 's_m_y_ammucity_01',
         ["scenario"] = "WORLD_HUMAN_COP_IDLES",
         ["radius"] = 1.5,
@@ -812,7 +827,7 @@ Config.Locations = {
     ["ammunation6"] = {
         ["label"] = "Ammunation",
         ["type"] = "weapon",
-        ["coords"] = vector4(23.0, -1105.67, 29.8, 162.91),
+        ["coords"] = vector4(17.96, -1107.86, 29.8, 168.26), -- 8168
         ["ped"] = 's_m_y_ammucity_01',
         ["scenario"] = "WORLD_HUMAN_COP_IDLES",
         ["radius"] = 1.5,
@@ -826,7 +841,7 @@ Config.Locations = {
     ["ammunation7"] = {
         ["label"] = "Ammunation",
         ["type"] = "weapon",
-        ["coords"] = vector4(2567.48, 292.59, 108.73, 349.68),
+        ["coords"] = vector4(2564.74, 298.45, 108.73, 263.6), -- 7354
         ["ped"] = 's_m_y_ammucity_01',
         ["scenario"] = "WORLD_HUMAN_COP_IDLES",
         ["radius"] = 1.5,
@@ -840,7 +855,7 @@ Config.Locations = {
     ["ammunation8"] = {
         ["label"] = "Ammunation",
         ["type"] = "weapon",
-        ["coords"] = vector4(-1118.59, 2700.05, 18.55, 221.89),
+        ["coords"] = vector4(-1112.67, 2697.43, 18.55, 131.55),  -- 5004
         ["ped"] = 's_m_y_ammucity_01',
         ["scenario"] = "WORLD_HUMAN_COP_IDLES",
         ["radius"] = 1.5,
@@ -854,7 +869,7 @@ Config.Locations = {
     ["ammunation9"] = {
         ["label"] = "Ammunation",
         ["type"] = "weapon",
-        ["coords"] = vector4(841.92, -1035.32, 28.19, 1.56),
+        ["coords"] = vector4(841.1, -1029.72, 28.19, 275.26), -- 8194
         ["ped"] = 's_m_y_ammucity_01',
         ["scenario"] = "WORLD_HUMAN_COP_IDLES",
         ["radius"] = 1.5,
@@ -868,7 +883,7 @@ Config.Locations = {
     ["ammunation10"] = {
         ["label"] = "Ammunation",
         ["type"] = "weapon",
-        ["coords"] = vector4(-1304.19, -395.12, 36.7, 75.03),
+        ["coords"] = vector4(-1309.85, -394.55, 36.7, 355.57), -- 7174
         ["ped"] = 's_m_y_ammucity_01',
         ["scenario"] = "WORLD_HUMAN_COP_IDLES",
         ["radius"] = 1.5,
@@ -882,7 +897,7 @@ Config.Locations = {
     ["ammunation11"] = {
         ["label"] = "Ammunation",
         ["type"] = "weapon",
-        ["coords"] = vector4(-3173.31, 1088.85, 20.84, 244.18),
+        ["coords"] = vector4(-3168.1, 1087.4, 20.84, 166.22), -- 5033
         ["ped"] = 's_m_y_ammucity_01',
         ["scenario"] = "WORLD_HUMAN_COP_IDLES",
         ["radius"] = 1.5,
@@ -895,38 +910,38 @@ Config.Locations = {
     },
 
     -- Casino Locations
-    ["casino"] = {
-        ["label"] = "Diamond Casino",
-        ["coords"] = vector4(949.29, 32.13, 71.95, 79.54),
-        ["ped"] = 'csb_tomcasino',
-        ["scenario"] = "WORLD_HUMAN_STAND_MOBILE",
-        ["radius"] = 1.5,
-        ["targetIcon"] = "fas fa-coins",
-        ["targetLabel"] = "Buy Chips",
-        ["products"] = Config.Products["casino"],
-        ["showblip"] = true,
-        ["blipsprite"] = 617,
-        ["blipcolor"] = 0
-    },
+    -- ["casino"] = {
+    --     ["label"] = "Diamond Casino",
+    --     ["coords"] = vector4(949.29, 32.13, 71.95, 79.54),
+    --     ["ped"] = 'csb_tomcasino',
+    --     ["scenario"] = "WORLD_HUMAN_STAND_MOBILE",
+    --     ["radius"] = 1.5,
+    --     ["targetIcon"] = "fas fa-coins",
+    --     ["targetLabel"] = "Buy Chips",
+    --     ["products"] = Config.Products["casino"],
+    --     ["showblip"] = true,
+    --     ["blipsprite"] = 617,
+    --     ["blipcolor"] = 0
+    -- },
 
-    ["casinobar"] = {
-        ["label"] = "Casino Bar",
-        ["coords"] = vector4(937.45, 27.22, 71.83, 61.21),
-        ["ped"] = 'a_m_y_smartcaspat_01',
-        ["scenario"] = "WORLD_HUMAN_VALET",
-        ["radius"] = 1.5,
-        ["targetIcon"] = "fas fa-wine-bottle",
-        ["targetLabel"] = "Open Casino Bar",
-        ["products"] = Config.Products["liquor"],
-        ["showblip"] = false,
-        ["blipsprite"] = 52,
-        ["blipcolor"] = 0
-    },
+    -- ["casinobar"] = {
+    --     ["label"] = "Casino Bar",
+    --     ["coords"] = vector4(937.45, 27.22, 71.83, 61.21),
+    --     ["ped"] = 'a_m_y_smartcaspat_01',
+    --     ["scenario"] = "WORLD_HUMAN_VALET",
+    --     ["radius"] = 1.5,
+    --     ["targetIcon"] = "fas fa-wine-bottle",
+    --     ["targetLabel"] = "Open Casino Bar",
+    --     ["products"] = Config.Products["liquor"],
+    --     ["showblip"] = false,
+    --     ["blipsprite"] = 52,
+    --     ["blipcolor"] = 0
+    -- },
 
     -- Weedshop Locations
     ["weedshop"] = {
         ["label"] = "Smoke On The Water",
-        ["coords"] = vector4(-1171.31, -1570.89, 4.66, 130.03),
+        ["coords"] = vector4(-1173.74, -1573.05, 4.37, 128.3), -- moved outside
         ["ped"] = 'a_m_y_hippy_01',
         ["scenario"] = "WORLD_HUMAN_AA_SMOKE",
         ["radius"] = 1.5,
@@ -941,7 +956,7 @@ Config.Locations = {
     -- Sea Word Locations
     ["seaword"] = {
         ["label"] = "Sea Word",
-        ["coords"] = vector4(-1687.03, -1072.18, 13.15, 52.93),
+        ["coords"] = vector4(-1687.03, -1072.18, 13.15, 52.93), -- works
         ["ped"] = 'a_m_y_beach_01',
         ["scenario"] = "WORLD_HUMAN_STAND_IMPATIENT",
         ["radius"] = 1.5,
@@ -956,7 +971,7 @@ Config.Locations = {
     -- Leisure Shop Locations
     ["leisureshop"] = {
         ["label"] = "Leisure Shop",
-        ["coords"] = vector4(-1505.91, 1511.95, 115.29, 257.13),
+        ["coords"] = vector4(-1505.91, 1511.95, 115.29, 257.13), -- works
         ["ped"] = 'a_m_y_beach_01',
         ["scenario"] = "WORLD_HUMAN_STAND_MOBILE_CLUBHOUSE",
         ["radius"] = 1.5,
