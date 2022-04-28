@@ -97,6 +97,27 @@ local function openShop(shop, data)
     end)
 end
 
+RegisterNetEvent("qb-shops:client:ConfigureShop", function(ped, identifier)
+    if Config.UseTarget then
+        TaskStartScenarioInPlace(ped, Config.Locations[identifier]["scenario"], true)
+        FreezeEntityPosition(ped, true)
+        SetBlockingOfNonTemporaryEvents(ped, true)
+        exports['qb-target']:AddTargetEntity(ped, {
+            options = {
+                {
+                    label = Config.Locations[identifier]["targetLabel"],
+                    icon = Config.Locations[identifier]["targetIcon"],
+                    action = function()
+                        openShop(identifier, Config.Locations[identifier])
+                    end
+                }
+            },
+            distance = 2.5
+        })
+    end
+end)
+
+
 local listen = false
 local function Listen4Control()
     CreateThread(function()
@@ -123,31 +144,34 @@ local function createPeds()
     for k, v in pairs(Config.Locations) do
         if not ShopPed[k] then ShopPed[k] = {} end
         local current = v["ped"]
-        current = type(current) == 'string' and GetHashKey(current) or current
-        RequestModel(current)
 
-        while not HasModelLoaded(current) do
-            Wait(0)
-        end
-        ShopPed[k] = CreatePed(0, current, v["coords"].x, v["coords"].y, v["coords"].z-1, v["coords"].w, false, false)
-        TaskStartScenarioInPlace(ShopPed[k], v["scenario"], true)
-        FreezeEntityPosition(ShopPed[k], true)
-        SetEntityInvincible(ShopPed[k], true)
-        SetBlockingOfNonTemporaryEvents(ShopPed[k], true)
-
-        if Config.UseTarget then
-            exports['qb-target']:AddTargetEntity(ShopPed[k], {
-                options = {
-                    {
-                        label = v["targetLabel"],
-                        icon = v["targetIcon"],
-                        action = function()
-                            openShop(k, Config.Locations[k])
-                        end
-                    }
-                },
-                distance = 2.0
-            })
+        if v["robbable"] == false then          
+            current = type(current) == 'string' and GetHashKey(current) or current
+            RequestModel(current)
+    
+            while not HasModelLoaded(current) do
+                Wait(0)
+            end
+            ShopPed[k] = CreatePed(0, current, v["coords"].x, v["coords"].y, v["coords"].z-1, v["coords"].w, false, false)
+            TaskStartScenarioInPlace(ShopPed[k], v["scenario"], true)
+            FreezeEntityPosition(ShopPed[k], true)
+            SetEntityInvincible(ShopPed[k], true)
+            SetBlockingOfNonTemporaryEvents(ShopPed[k], true)
+    
+            if Config.UseTarget then
+                exports['qb-target']:AddTargetEntity(ShopPed[k], {
+                    options = {
+                        {
+                            label = v["targetLabel"],
+                            icon = v["targetIcon"],
+                            action = function()
+                                openShop(k, Config.Locations[k])
+                            end
+                        }
+                    },
+                    distance = 2.0
+                })
+            end            
         end
     end
 
@@ -185,7 +209,9 @@ end
 local function deletePeds()
     if pedSpawned then
         for k, v in pairs(ShopPed) do
-            DeletePed(v)
+            if v["robbable"] == false then
+                DeletePed(v)
+            end
         end
     end
 end
